@@ -122,7 +122,7 @@ int main(int argc, char* argv[]) {
         QObject::connect(button, &QPushButton::clicked, [=]() {
             static std::map<QString, int> globalState;
             globalState[label] = 1 - globalState[label]; // Toggle state
-            sendIRCode(globalState[label] == 0 ? irCodes.at(label).first : irCodes.at(label).second, 2300, 3);
+            sendIRCode(globalState[label] == 0 ? irCodes.at(label).first : irCodes.at(label).second, 2300, 0);
         });
     }
 
